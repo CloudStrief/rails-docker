@@ -1,0 +1,17 @@
+rails:
+    build: ./rails
+    ports:
+        - "3000:3000"
+    links:
+        - "mysql"
+    volumes:
+        - ./opt/app:/usr/src/app
+
+mysql:
+    image: mysql
+    ports:
+        - "3306:3306"
+    volumes:
+        - ./opt/data/mysql:/var/lib/mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: 123456
