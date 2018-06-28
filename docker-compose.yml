@@ -8,10 +8,11 @@ rails:
         - ./opt/app:/usr/src/app
 
 mysql:
-    image: mysql
+    image: mysql:5
     ports:
         - "3306:3306"
     volumes:
         - ./opt/data/mysql:/var/lib/mysql
     environment:
         MYSQL_ROOT_PASSWORD: 123456
+        MYSQL_DATABASE: "app_development"

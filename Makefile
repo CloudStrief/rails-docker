@@ -6,6 +6,9 @@ build:
 start:
 	docker-compose start
 
+status:
+	docker-compose ps
+
 stop:
 	docker-compose stop
 
