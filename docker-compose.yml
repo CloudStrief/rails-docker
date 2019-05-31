@@ -5,7 +5,7 @@ rails:
     links:
         - "mysql"
     volumes:
-        - ./opt/app:/usr/src/app
+        - ./app:/usr/src/app
 
 mysql:
     image: mysql:5
